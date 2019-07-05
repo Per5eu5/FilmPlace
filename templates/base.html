@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>
+        {% block title %}
+            THIS IS EPIC SHIT
+        {% endblock%}
+    </title>
+</head>
+
+<body>
+
+    <div class="header-wrapper">
+        <header>
+            <div class="menu">
+                <div class="search">
+                    <div class="lcol">
+                        <div class="main-search">
+                            <form action="/search/" method="get">
+                                <input type="text" name="query" class="search-field" placeholder="Поиск...">
+                                <button type="button" class="search-button">Поиск<i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="main-menu">
+
+                        <li class="">
+                            <a class="main-link" href="/timetable/">Кинотеатры</a>
+                        </li>
+
+                        <li class="">
+                            <a class="main-link" href="/films/">Сеансы</a>
+                        </li>
+
+                        <li class="">
+                            <a class="main-link" href="/news/">О сайте</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="content-wrapper">
+        {% block body %}
+            <h2>111111111111</h2>
+        {% endblock %}
+    </div>
+
+
+    <div class="footer-wrapper">
+        <footer>
+            <div class="lfooter">
+                <ul>
+
+                    <li class="">
+
+                        <a class="main-link" href="/footer/about/">О сайте</a>
+
+                    </li>
+
+
+                    <li class="">
+
+                        <a class="main-link" href="/footer/cinemas/">О кинотеатрах</a>
+
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="rfooter">
+                <span>© 2019 Nikolaev Pavel</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

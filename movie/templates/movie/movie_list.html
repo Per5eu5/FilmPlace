@@ -1,0 +1,46 @@
+{% extends 'movie/index.html' %}
+
+
+{% block title %}
+    Movie list
+{% endblock %}
+
+{% block body %}
+    <h1>Поиск сеанса</h1>
+
+    {% if form %}
+        <div class="searchForm">
+            <form action="{% url 'movie_list' %}" method="post">
+                {% csrf_token %}
+                <table class="search_form">
+                    {{ form.as_table }}
+                </table>
+                <button type="submit">Кнопка</button>
+            </form>
+        </div>
+    {% endif %}
+
+    <div>
+        <table>
+            {% for m in movie %}
+                    <tr>
+                        <td><a href="{{ m.url }}">{{ m.title }}</a></td>
+                        <td>{{ m.date }}</td>
+                        <td>{{ m.start_time }}</td>
+                        <td>{{ m.age }}</td>
+                        <td>{{ m.cost }}</td>
+                        <td>{{ m.dimension }}</td>
+                        <td>{{ m.hall }}</td>
+                        <!--<td><img src="{{ m.poster }}" alt=""></td>-->
+                    </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+
+
+{% endblock %}
+
+
+
+
