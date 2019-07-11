@@ -1,9 +1,79 @@
-{% extends 'base.html' %}
+{#{% extends 'base.html' %}#}
+<style>
+    .main{
+          position: absolute;
+          left: 80%;
+          transform: translate(-50%);
+    }
+    h1, h2{
+        text-align: center;
+    }
+    a{
+        margin: 0 40%;
+        border: 2px solid #009cff;
+        border-radius: 3px;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background: none;
+        cursor: pointer;
+        padding: 5px 20px 9px;
+        display: inline-block;
+        outline: none;
+        position: relative;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        z-index: 1;
+        color: #fff
+    }
+
+    a:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #009cff;
+}
+
+a:hover,
+a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+
+    html{
+        background: url(https://avatars.mds.yandex.net/get-pdb/1352825/470e099d-afc8-42f2-b17e-7798abb433b3/s1200);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+    }
+
+</style>
+
 
 {% block title %}
-    Film sessions
+    <title>Главная</title>
 {% endblock %}
 
 {% block body %}
-    <h1>222222222222222</h1>
+    <body>
+            <div class="main">
+                <h1>Ломай стекло</h1>
+                <h1>Грызи металл</h1>
+                <h1>Ищи крутые сеансы</h1>
+                <h2>(с) Джейсон Стетхем</h2>
+                <a href="{% url 'movie_list' %}">Найти</a>
+            </div>
+    </body>
 {% endblock %}

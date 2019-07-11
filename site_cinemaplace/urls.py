@@ -18,10 +18,11 @@ from django.urls import path
 from django.urls import include
 
 
+
 from .views import *
 
 urlpatterns = [
-    path('', redirect_cinemas),
+    path('', include('movie.urls')),
     path('admin/', admin.site.urls),
-    path('cinemas/', include('movie.urls'))
+    path('account/', include('account.urls')),
 ]
