@@ -9,16 +9,19 @@
             Пользователя с таким именем не найдено.
         </p>
     {% else %}
-        <p>Пожалуйста, заполнител поля:</p>
+        <p>Пожалуйста, заполнител поля. Если у вас нет акканута,  вы можете <a href="{% url "register" %}"
+                                                                                        >зарегистрироваться</a></p>
     {% endif %}
     <div class="login-form">
         <form action="{% url "login" %}" method="post">
             {{ form.as_p }}
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}" />
-            <p><input type="submit" value="Log-in"></p>
+            <p><input type="submit" value="Войти"></p>
         </form>
 
         <p><a href="{% url "password_reset" %}">Забыли пароль?</a></p>
     </div>
+
+    <img src="https://4.bp.blogspot.com/-RkuHn0ZMtCw/XAu8bl5Uz9I/AAAAAAAACOE/FvUl954CEawoW_aK0UDzREcBW5DmbKQ2gCEwYBhgL/s1600/Jason-Statham-in-Homefront.jpg" alt="" style="height: 300px">
 {% endblock %}
