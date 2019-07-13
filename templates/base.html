@@ -8,7 +8,6 @@
         background-size: 40%;
         background-position: center;
         background-repeat: no-repeat;
-
         position: relative;
 }
 </style>
@@ -29,16 +28,24 @@
 
     <div class="header-wrapper">
         <header>
+
+
+
             <div class="menu">
-                <div class="cinema" style="background-image: url('../static/images/cinema-512.png');">
-                    <a href="/"></a>
+
+                <div id="logo">
+                    <a class="logo" href="/">FilmSeats</a>
                 </div>
+
+{#                <div class="cinema" style="background-image: url('../static/images/cinema-512.png');">#}
+{#                    <a href="/"></a>#}
+{#                </div>#}
 
                 <nav>
                     <ul class="main-menu">
 
                         <li class="">
-                            <a class="main-link" href="/timetable/">Кинотеатры</a>
+                            <a class="main-link" href="{% url 'movie_list' %}">Кинотеатры</a>
                         </li>
 
                         <li class="">
