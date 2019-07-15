@@ -30,7 +30,3 @@ class MovieList(View):
         # q = request.POST
         # print(q['title'])
         # return HttpResponse('<h1>Поис по запросу фильма {}</h1>'.format(q['title']))
-
-
-def index(request):
-    return render(request, 'movie/index.html')

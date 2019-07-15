@@ -37,17 +37,16 @@
                     <ul class="main-menu">
 
                         <li class="">
-                            <a class="main-link" href="{% url 'movie_list' %}">Кинотеатры</a>
+                            <a class="main-link" href="{% url 'movie_list' %}">Сеансы</a>
                         </li>
 
                         <li class="">
-                            <a class="main-link" href="/films/">Сеансы</a>
+                            <a class="main-link" href="{% url 'index_cinema_url' %}">Кинотеатры</a>
                         </li>
 
                         <li class="">
                             <a class="main-link" href="/news/">О сайте</a>
                         </li>
-
 
                     {% if request.user.is_authenticated %}
                         <li {% if section == "dashboard" %}class="selected"{% endif %}>
