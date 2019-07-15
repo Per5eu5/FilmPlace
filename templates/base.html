@@ -28,18 +28,10 @@
 
     <div class="header-wrapper">
         <header>
-
-
-
             <div class="menu">
-
                 <div id="logo">
                     <a class="logo" href="/">FilmSeats</a>
                 </div>
-
-{#                <div class="cinema" style="background-image: url('../static/images/cinema-512.png');">#}
-{#                    <a href="/"></a>#}
-{#                </div>#}
 
                 <nav>
                     <ul class="main-menu">
@@ -68,22 +60,17 @@
                             <a class="main-link" href="#">People</a>
                         </li>
                     {% endif %}
-
                     </ul>
                 </nav>
 
-
-
-
-            <span class="user">
-                {% if request.user.is_authenticated %}
-                    Hello {{ request.user.first_name }},
-                    <a class="main-link" href="{% url "logout" %}">Logout</a>
-                {% else %}
-                    <a class="main-link" href="{% url "login" %}">Log-in</a>
-                {% endif %}
-            </span>
-
+                <span class="user">
+                    {% if request.user.is_authenticated %}
+                        Hello {{ request.user.first_name }},
+                        <a class="main-link" href="{% url "logout" %}">Выход</a>
+                    {% else %}
+                        <a class="main-link" href="{% url "login" %}">Авторизация</a>
+                    {% endif %}
+                </span>
             </div>
         </header>
     </div>
@@ -94,33 +81,12 @@
         {% endblock %}
     </div>
 
-
     <div class="footer-wrapper">
-        <footer>
-            <div class="lfooter">
-                <ul>
-
-                    <li class="">
-
-                        <a class="main-link" href="/footer/about/">О сайте</a>
-
-                    </li>
-
-
-                    <li class="">
-
-                        <a class="main-link" href="/footer/cinemas/">О кинотеатрах</a>
-
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="rfooter">
-                <span>© 2019 Nikolaev Pavel</span>
-            </div>
-        </footer>
+        <div class="rfooter">
+            <span>© 2019 Nikolaev Pavel</span>
+        </div>
     </div>
+
 </body>
 
 </html>
