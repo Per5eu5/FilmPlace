@@ -23,8 +23,8 @@ from .views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index_url'),
     path('movie/', include('movie.urls')),
     path('account/', include('account.urls')),
-    path('cinema/', include('cinema.urls'))
+    path('cinema/', include('cinema.urls')),
+    path('', index, name='index_url'),
 ]

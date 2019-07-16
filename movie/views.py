@@ -1,11 +1,8 @@
 from django.shortcuts import render
-from django.shortcuts import redirect
 from .models import Solovey
 
 from django.views.generic import View
 from .forms import SearchForm
-from django.core.exceptions import ValidationError
-from django.http import HttpResponse
 from django.db.models import Q
 
 
@@ -25,8 +22,3 @@ class MovieList(View):
             return render(request, 'movie/movie_list.html', context={'movie': films})
         else:
             return render(request, 'movie/movie_list.html', context={'movie': Solovey.objects.all()})
-
-        # bound_form = SearchForm(request.POST)
-        # q = request.POST
-        # print(q['title'])
-        # return HttpResponse('<h1>Поис по запросу фильма {}</h1>'.format(q['title']))

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Добавление места просмотра
+{% endblock %}
+
+{% block body %}
+    <h1>Добавление места просмотра</h1>
+
+    {% if form %}
+        <div class="addPlaceForm">
+            <form action="{% url 'index_cinema_url' %}" method="post">
+                {% csrf_token %}
+                <table class="search_form">
+                    {{ form.as_table }}
+                </table>
+                <button type="submit">Добавить</button>
+            </form>
+        </div>
+    {% endif %}
+
+
+
+    <div>
+        <img src="http://www1.pictures.zimbio.com/gi/Safe+European+Premiere+Inside+Arrivals+DgoQtTF5XFux.jpg" alt=""
+             style="float: top; height: 400px">
+    </div>
+    
+{% endblock %}
+
