@@ -7,7 +7,7 @@
     <p>Пожалуйста, введите данные в поля ниже. Если у вас нет акканута,  вы можете <a href="{% url "register" %}"
                                                                                         >зарегистрироваться</a></p>
     <form action="." method="post">
-        {{ form.as_p }}
+        {{ form.as_table }}
         {% csrf_token %}
         <p><input type="submit" value="Log in"></p>
     </form>

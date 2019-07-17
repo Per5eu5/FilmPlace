@@ -45,7 +45,7 @@
                         </li>
 
                         <li class="">
-                            <a class="main-link" href="/news/">О сайте</a>
+                            <a class="main-link" href="{% url 'about' %}">О сайте</a>
                         </li>
 
                     {% if request.user.is_authenticated %}

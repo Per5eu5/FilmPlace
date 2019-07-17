@@ -26,5 +26,5 @@ urlpatterns = [
     path('movie/', include('movie.urls')),
     path('account/', include('account.urls')),
     path('cinema/', include('cinema.urls')),
-    path('', index, name='index_url'),
+    path('', include('defaultpages.urls')),
 ]
