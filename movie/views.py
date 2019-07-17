@@ -13,7 +13,6 @@ class MovieList(View):
         return render(request, 'movie/movie_list.html', context={'movie': movie, 'form': form})
 
     def post(self, request):
-
         bound_form = SearchForm(request.POST)
 
         if bound_form.is_valid:

@@ -10,13 +10,11 @@ body{
 	margin: 0;
 }
 
-
 .logo{
 	color: white;
 	font-size: 32px;
 	text-decoration: none;
 }
-
 
 .content-wrapper{
 	min-height: calc(100% - 35px);
@@ -63,7 +61,6 @@ th {
 .search{
 	margin: 20px;
 }
-
 
 .menu div{
 	display: inline-block;
@@ -125,7 +122,6 @@ a.main-link:focus:after {
 	transform: translateY(0px);
 }
 
-
 a.main-link.trigger:hover:after,
 a.main-link.trigger:hover:focus {
 	height: 0;
@@ -142,8 +138,6 @@ div.footer-wrapper {
 	background-color: #000;
 	color: #eee;
 }
-
-
 
 div.rfooter span:last-child {
 	color: #808080;
