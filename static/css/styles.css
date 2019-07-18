@@ -144,3 +144,11 @@ div.rfooter span:last-child {
 	float: right;
 	margin: 10px 160px 0 20px;
 }
+
+.user{
+	color: lemonchiffon;
+}
+
+li.selected{
+	color: red;
+}
